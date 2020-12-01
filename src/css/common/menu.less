@@ -1,0 +1,100 @@
+.menu {
+
+    @media screen and (max-width: 1200px) {
+        display: none;
+        position: absolute;
+        width: 246px;
+        right: 0;
+        top: 0; 
+        background: #ffffff;
+        overflow-y: auto;
+        z-index: 998;
+        padding-top: 90px;
+    }
+    @media screen and (max-width: 670px) {
+        height: 100vh;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        @media screen and (max-width: 1200px) {
+            padding: 7px 0 45px;
+            flex-direction: column;
+        }
+    }
+    &__item {
+        position: relative;
+    }
+    &__link {
+        display: block;
+        padding: 45px 12px;
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.5s;
+
+        @media screen and (max-width: 1200px) {
+            padding: 12px 20px 12px 29px;
+            font-size: 18px;
+            line-height: 1.2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 1201px) {
+            &:hover {
+                color: @color-orange;
+            }
+        }
+
+        &--active {
+            color: @color-orange;
+        }
+        &--contacts {
+            padding: 45px 34px;
+            color: #ffffff;
+            background: @color-black;
+
+            @media screen and (max-width: 1200px) {
+                background: #ffffff;
+                color: @color-black;
+            }
+
+            @media screen and (min-width: 1201px) {
+                &:hover {
+                    background: @color-orange;
+                    color: #ffffff;
+                }
+            }
+        }
+        
+    }
+    &__link-more {
+        display: none;
+
+        @media screen and (max-width: 1200px) {
+            display: block;
+            width: 11px;
+            height: 6px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            svg {
+                width: 11px;
+                height: 6px;
+                display: block;
+            }
+
+            &--open {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
