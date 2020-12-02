@@ -9,19 +9,30 @@ $(document).ready(function () {
     var toggleBurger = function toggleBurger(event) {
       event.preventDefault();
       $(menuBlock).slideToggle(300);
-      burger.classList.toggle('burger--open');
+      burger.classList.toggle('burger--open'); // Для моб. запрещаем прокрутку основного контента
+
+      if (window.matchMedia("(max-width: 670px)").matches) {
+        document.querySelector('.body').classList.toggle('body--on-popup');
+      }
     };
 
     var closeBurger = function closeBurger(event) {
       if (!event.target.closest('.menu') && !event.target.closest('#burger')) {
         $(menuBlock).slideUp(300);
-        burger.classList.remove('burger--open');
+        burger.classList.remove('burger--open'); // если моб., то снимаем запрет прокрутки осногоо контента
+
+        if (window.matchMedia("(max-width: 670px)").matches) {
+          document.querySelector('.body').classList.remove('body--on-popup');
+        }
       }
     };
 
     burger.addEventListener('click', toggleBurger);
     var menuBlock = document.querySelector('.menu');
-    document.addEventListener('click', closeBurger);
+
+    if (isMobile) {
+      document.addEventListener('click', closeBurger);
+    }
   } // Подменю на моб. версии
 
 

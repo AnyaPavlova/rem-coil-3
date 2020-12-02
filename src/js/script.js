@@ -12,13 +12,23 @@ $(document).ready(function () {
             event.preventDefault();
             $(menuBlock).slideToggle(300);
             burger.classList.toggle('burger--open');
+
+            // Для моб. запрещаем прокрутку основного контента
+            if(window.matchMedia("(max-width: 670px)").matches) {
+                document.querySelector('.body').classList.toggle('body--on-popup');
+            }
         }
 
-        document.addEventListener('click', closeBurger);
+        if(isMobile) { document.addEventListener('click', closeBurger); }
         function closeBurger(event) {
             if (!(event.target.closest('.menu')) && !(event.target.closest('#burger'))) {
                 $(menuBlock).slideUp(300);
                 burger.classList.remove('burger--open');
+
+                // если моб., то снимаем запрет прокрутки осногоо контента
+                if(window.matchMedia("(max-width: 670px)").matches) {
+                    document.querySelector('.body').classList.remove('body--on-popup');
+                }
             }
         }
     }

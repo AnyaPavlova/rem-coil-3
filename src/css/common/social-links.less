@@ -1,0 +1,31 @@
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: -5px;
+    margin-right: -5px;
+
+    @media screen and (max-width: 670px) {
+        justify-content: center;
+    }
+
+    &__item {
+        margin-left: 5px;
+        margin-right: 5px;
+        display: block;
+
+        svg {
+            width: 23px;
+            fill: @color-black;
+            display: block;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            svg {
+                fill: @color-orange;
+            }
+        }
+    }
+
+}

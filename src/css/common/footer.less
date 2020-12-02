@@ -1,0 +1,104 @@
+.footer {
+    padding: 50px 0;
+
+    @media screen and (max-width: 960px) {
+        padding: 45px 0 40px;
+    }
+    @media screen and (max-width: 670px) {
+        padding: 40px 0 47px;
+    }
+
+    &__row {
+        justify-content: space-between;
+    }
+    &__col-copyright {
+        @media screen and (max-width: 670px) {
+            order: 1;
+        }
+    }
+    &__col-links {
+        @media screen and (max-width: 670px) {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__logo-block {
+        display: block;
+        padding-top: 5px;
+
+        @media screen and (max-width: 670px) {
+            padding: 0;
+        }
+    }
+    &__logo {
+        width: 200px;
+
+        @media screen and (max-width: 670px) {
+            margin: auto;
+        }
+    }
+    &__text {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        font-size: 13px;
+        line-height: 1.4;
+
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+    }
+    &__copyright {
+        font-size: 14px;
+        line-height: 1.4;
+
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+    }
+
+    &__btns-block {
+        text-align: right;
+
+        @media screen and (max-width: 670px) {
+            display: none;
+        }
+    }
+    &__btn {        
+        padding: 12px 29px 13px;
+        text-align: center;
+        display: inline-block;
+        color: #ffffff;
+        line-height: 1.4;
+        font-size: 18px;
+        background: @color-orange;
+        transition: all 0.5s;
+        border: 2px solid @color-orange;
+        text-decoration: none;
+
+        &:hover {
+            background: transparent;
+            color: @color-orange;
+        }
+    }
+
+    &__links-block {
+        padding: 15px 0 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media screen and (max-width: 670px) {
+            align-items: center;
+            padding-top: 35px;
+        }
+    }
+    &__link {
+        font-size: 16px;
+        line-height: 1.6;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-orange;
+        }
+    }
+}
