@@ -1,0 +1,22 @@
+.form {
+    &__message {
+        margin-top: 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &__message--ok {
+        color      : @color-orange;
+        display: block;
+    }
+
+    &__message--error {
+        color      : red;
+        display: block;
+    }
+}
+
+// Ошибки заполнения
+.form__input--error  {
+    background: rgba(255,0,0,0.1) !important;
+}

@@ -1,0 +1,36 @@
+.subscribe {
+    background: @color-gray;
+
+    &__row {
+        @media screen and (max-width: 960px) {
+            align-content: center;
+            align-items: center;
+        }
+    }
+
+    &__col-form {
+        width: 70%;
+
+        @media screen and (max-width: 960px) {
+            width: 60%;
+        }
+    }
+    &__col-title {
+        width: 30%;
+
+        @media screen and (max-width: 960px) {
+            width: 40%;
+        }
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 67px;
+        }
+    }
+
+    .form__message {
+        padding-left: calc( 30% + 10px );
+        text-align: left;   
+    }
+}

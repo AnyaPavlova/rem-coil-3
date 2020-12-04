@@ -1,0 +1,99 @@
+.promo-about {
+
+    @media screen and (max-width: 1040px)  {
+        background: @color-black;
+    }
+
+    &:before {
+        content   : '';
+        display   : block;
+        position  : absolute;
+        width     : calc((100% - 980px)/2);
+        height    : 100%;
+        left      : 0;
+        top       : 0;
+        bottom    : 0;
+        background: @color-black;
+
+        @media screen and (max-width: 1200px) {
+            width     : 50%;
+        }
+
+        @media screen and (max-width: 1040px)  {
+            display: none;
+        }
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 67px;
+        }
+    }
+    
+    &__container {
+        background: @color-black;
+        color: #ffffff;
+    }
+
+    &__title-block {
+        display: block;
+        max-width: 780px; //720+30*2
+        margin: auto;
+        padding: 120px 30px 155px;
+
+        @media screen and (max-width: 1040px) {
+            padding: 55px 30px 60px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 20px 0 41px;
+        }
+    }
+    &__title {
+        font-size: 28px;
+
+        @media screen and (max-width: 960px) {
+            font-size: 20px;
+            text-align: center;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+
+    &__info {
+        padding-bottom: 15px;
+        padding-right: 80px;
+
+        @media screen and (max-width: 1040px) {
+            padding-right: 0;
+        }
+        @media screen and (max-width: 960px) {
+            padding-bottom: 93px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 48px;
+        }
+    }
+    &__col {
+        padding-bottom: 35px;
+
+        @media screen and (max-width: 670px) {
+            padding-bottom: 25px;
+        }
+    }
+    &__item-title {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    &__item-text {
+        font-size: 20px;
+
+        a {
+            font-weight: 700;
+            color: @color-orange;
+            text-decoration: none;
+        }
+    }
+}

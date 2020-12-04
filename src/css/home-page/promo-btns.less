@@ -1,0 +1,106 @@
+.promo-btns {
+    position: relative;
+
+    @media screen and (max-width: 1040px) {
+        background: @color-black;
+    }
+
+    &:before {
+        content   : '';
+        display   : block;
+        position  : absolute;
+        width     : calc((100% - 980px)/2);
+        height    : 100%;
+        left      : 0;
+        top       : 0;
+        bottom    : 0;
+        background: @color-black;
+
+        @media screen and (max-width: 1200px) {
+            width: calc((100% - 962px)/2);
+        }
+
+        @media screen and (max-width: 1040px) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding-right: 0;
+            padding-left : 52px;
+        }
+
+        @media screen and (max-width: 670px) {
+            padding: 0;
+        }
+    }
+
+    &__col {
+        @media screen and (max-width: 1040px) {
+            width: 25%;
+        }
+
+        @media screen and (max-width: 670px) {
+            width: 50%;
+        }
+    }
+
+    &__btn {
+        display        : block;
+        width          : 100%;
+        padding        : 26px 20px;
+        color          : #ffffff;
+        text-decoration: none;
+        font-size      : 18px;
+        font-weight    : 700;
+
+        @media screen and (max-width: 1040px) {
+            padding: 16px 20px;
+        }
+
+        &--dark-gray {
+            background-color: #666666;
+        }
+
+        &--gray {
+            background: #999999;
+        }
+
+        &--light-gray {
+            background: #CCCCCC;
+        }
+    }
+
+    &__btn--virtual-tour {
+        background     : @color-orange;
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: space-between;
+        margin-left    : -20px;
+        width          : calc(100% + 20px);
+
+        @media screen and (max-width: 1040px) {
+            margin-left: 0;
+            width      : 100%;
+        }
+
+        svg {
+            width     : 40px;
+            height    : 39px;
+            align-self: center;
+
+            path {
+                stroke: #ffffff;
+                fill  : #ffffff;
+            }
+
+            @media screen and (max-width: 1040px) {
+                display: none;
+            }
+
+        }
+    }
+
+
+}
