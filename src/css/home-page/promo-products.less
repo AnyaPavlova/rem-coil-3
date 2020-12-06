@@ -1,0 +1,84 @@
+.promo-products {
+    padding: 216px 0 122px;
+
+    @media screen and (max-width: 1040px) {
+        padding: 151px 0 42px;
+    }
+    @media screen and (max-width: 670px) {
+        padding: 154px 0 70px;
+    }
+
+    &__inner {
+        max-width: 900px;
+
+        @media screen and (max-width: 1040px) {
+            padding: 0 67px;
+            max-width: 100%;
+        } 
+        @media screen and (max-width: 960px) {
+            max-width: 704px;
+        }
+    }
+
+    &__title {
+        display       : flex;
+        flex-direction: column;
+
+        &-note {
+            display       : block;
+            text-align    : center;
+            font-weight   : 700;
+            font-size     : 14px;
+            letter-spacing: 4.2px;
+            color         : @color-orange;
+            padding-bottom: 33px;
+            position      : relative;
+
+            &:after {
+                content   : '';
+                display   : block;
+                width     : 31px;
+                height    : 2px;
+                background: @color-orange;
+                margin    : auto;
+                position  : absolute;
+                bottom    : 0;
+                left      : 0;
+                right     : 0;
+            }
+
+        }
+
+        &-name {
+            padding    : 30px 0 50px;
+            font-size  : 50px;
+            font-weight: 900;
+            display    : inline-block;
+            text-align : center;
+            display    : block;
+
+            @media screen and (max-width: 960px)  {
+                font-size: 36px;
+                padding-bottom: 37px;
+            }
+            @media screen and (max-width: 670px) {
+                font-size: 34px;
+            }
+        }
+    }
+
+    &__text-block {
+        padding-bottom: 75px;
+        font-size: 20px;
+
+        @media screen and (max-width: 960px)  {
+            text-align: center;
+            padding-bottom: 41px;
+        }
+    }
+
+    &__btns-block {
+        text-align: center;
+    }
+
+}

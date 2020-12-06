@@ -48,6 +48,72 @@ $(document).ready(function () {
 
       btnOpenSubmenuArr[i].addEventListener('click', openSubMenu);
     }
+  } //Промо-слайдер
+
+
+  var promoSlider = document.querySelector('#promo-slider');
+
+  if (promoSlider) {
+    var versionSlider = function versionSlider() {
+      return window.matchMedia("(max-width: 670px)").matches;
+    };
+
+    var StartSliders = function StartSliders() {
+      if (!isMobileForSlider) {
+        //promo-slider
+        $('#promo-slider').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          arrows: true,
+          rows: 0,
+          // infinite: false,
+          variableWidth: true,
+          prevArrow: '<button class="promo-slider__arrow promo-slider__arrow--left" type="button"></button>',
+          nextArrow: '<button class="promo-slider__arrow promo-slider__arrow--right" type="button"></button>',
+          speed: 1000,
+          initialSlide: 1,
+          responsive: [{
+            breakpoint: 960,
+            settings: {
+              slidesToShow: 1
+            }
+          }]
+        });
+      } else {
+        //promo-slider-mob
+        $('#promo-slider-mob').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          rows: 0,
+          prevArrow: '<button class="promo-slider__arrow promo-slider__arrow--left" type="button"></button>',
+          nextArrow: '<button class="promo-slider__arrow promo-slider__arrow--right" type="button"></button>'
+        });
+      }
+    };
+
+    var checkDevice = function checkDevice() {
+      var newIsMobileForSlider = versionSlider();
+
+      if (newIsMobileForSlider !== isMobileForSlider) {
+        isMobileForSlider = newIsMobileForSlider;
+
+        if ($("#promo-slider").hasClass("slick-initialized")) {
+          $("#promo-slider").slick("unslick");
+        }
+
+        if ($("#promo-slider-mob").hasClass("slick-initialized")) {
+          $("#promo-slider-mob").slick("unslick");
+        }
+
+        StartSliders();
+      }
+    };
+
+    var isMobileForSlider = versionSlider();
+    StartSliders();
+    window.addEventListener('resize', checkDevice);
   }
   /*Полифилы для ie*/
 
