@@ -1,0 +1,79 @@
+.event-banner {
+    padding: 45px 0 105px;
+
+    @media screen and (max-width: 960px) {
+        padding: 176px 0 80px;
+    }
+    @media screen and (max-width: 670px) {
+        padding: 160px 0 80px;
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 69px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 42px;
+        }
+    }
+
+    &__container {
+        background: @color-black;
+        padding: 68px 47px 79px;
+        color: #ffffff;
+
+        @media screen and (max-width: 960px) {
+            padding: 39px 91px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 51px 12px;
+        }
+    }
+    &__title {
+        font-size: 39px;
+        line-height: 1.5;
+        padding-bottom: 25px;
+        font-weight: 400;
+
+        @media screen and (max-width: 960px) {
+            text-align: center;
+            font-size: 36px;
+            padding-bottom: 20px;
+            line-height: 1.2;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 34px;
+            padding-bottom: 17px;
+        }
+    }
+    &__dates {
+        padding-bottom: 7px;
+        text-align: center;
+        
+        @media screen and (max-width: 670px) {
+            font-size: 18px;
+        }
+    }
+    &__web {
+        text-align: center;
+        
+        @media screen and (max-width: 670px) {
+            font-size: 18px;
+        }
+    }
+    &__web-link {
+        text-decoration: none;
+    }
+    &__btns-block {
+        padding-top: 47px;
+        text-align: center;
+
+        @media screen and (max-width: 960px) {
+            padding-top: 30px;
+        }
+    }
+    &__btn {
+        min-width: 146px;
+        padding: 11px;
+    }
+}

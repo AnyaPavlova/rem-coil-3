@@ -41,8 +41,18 @@
     }
 
     &__item-col {
-        padding-left : 18px;
-        padding-right: 18px;
+        // padding-left : 18px;
+        // padding-right: 18px;
+        margin-left : 18px;
+        margin-right: 18px;
+        overflow: hidden;
+    }
+
+    &__photo {
+        transition: all 0.5s;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     &__item-text-block {

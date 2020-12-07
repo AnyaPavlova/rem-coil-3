@@ -32,5 +32,13 @@
     .form__message {
         padding-left: calc( 30% + 10px );
         text-align: left;   
+
+        @media screen and (max-width: 960px) {
+            padding-left: calc( 40% + 10px);
+        }
+
+        @media screen and (max-width: 670px) {
+            padding-left: 0;
+        }
     }
 }

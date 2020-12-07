@@ -54,6 +54,7 @@
         text-decoration: none;
         font-size      : 18px;
         font-weight    : 700;
+        transition     : all 0.2s;
 
         @media screen and (max-width: 1040px) {
             padding: 16px 20px;
@@ -61,14 +62,37 @@
 
         &--dark-gray {
             background-color: #666666;
+
+            &:hover {
+                background-color: #4d4d4d;
+            }
         }
 
         &--gray {
             background: #999999;
+
+            &:hover {
+                background-color: #808080;
+            }
         }
 
         &--light-gray {
             background: #CCCCCC;
+
+            &:hover {
+                background-color: #b3b3b3;
+            }
+        }
+
+        span {
+            display   : inline-block;
+            transition: all 0.5s;
+        }
+
+        &:hover span {
+            @media screen and (min-width: 1201px) {
+                transform: translateX(5px);
+            }
         }
     }
 
@@ -99,6 +123,16 @@
                 display: none;
             }
 
+        }
+
+        &:hover {
+            background-color: #f68a0a;
+
+            @media screen and (min-width: 1201px) {
+                span {
+                    transform: translateX(20px);
+                }
+            }
         }
     }
 
