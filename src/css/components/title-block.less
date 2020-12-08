@@ -1,0 +1,67 @@
+.title-block {
+    background: @color-black;
+    color     : #ffffff;
+
+    &__container {
+        padding: 20px 0;
+        min-height     : 404px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+
+        @media screen and (max-width: 960px) {
+            min-height: 300px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 10px 0;
+            min-height: 400px;
+        }
+    }
+
+    &__title {
+        display       : flex;
+        flex-direction: column;
+
+        &-note {
+            display       : block;
+            text-align    : center;
+            font-weight   : 700;
+            font-size     : 14px;
+            letter-spacing: 4.2px;
+            color         : @color-orange;
+            padding-bottom: 33px;
+            position      : relative;
+
+            &:after {
+                content   : '';
+                display   : block;
+                width     : 31px;
+                height    : 2px;
+                background: @color-orange;
+                margin    : auto;
+                position  : absolute;
+                bottom    : 0;
+                left      : 0;
+                right     : 0;
+            }
+
+        }
+
+        &-name {
+            padding    : 30px 0 0;
+            font-size  : 50px;
+            font-weight: 900;
+            display    : inline-block;
+            text-align : center;
+            display    : block;
+
+            @media screen and (max-width: 960px)  {
+                font-size: 36px;
+            }
+            @media screen and (max-width: 670px) {
+                font-size: 34px;
+            }
+        }
+    }
+
+}

@@ -114,9 +114,23 @@ $(document).ready(function () {
     var isMobileForSlider = versionSlider();
     StartSliders();
     window.addEventListener('resize', checkDevice);
-  }
-  /*Полифилы для ie*/
+  } //Переход по ссылке-анкору  
 
+
+  $('.link-anchor').on("click", function (e) {
+    e.preventDefault();
+    var mylink = $(this).attr('href');
+    var positionblock = $(mylink).offset().top; //вычисляем позицию блока
+
+    if (window.matchMedia("(max-width: 1200px)").matches) {
+      positionblock = positionblock - 90;
+    }
+
+    $('html, body').animate({
+      scrollTop: positionblock
+    }, 700);
+  });
+  /*Полифилы для ie*/
 
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
