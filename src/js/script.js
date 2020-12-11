@@ -108,15 +108,70 @@ $(document).ready(function () {
     }
 
     //Переход по ссылке-анкору  
-    $('.link-anchor').on("click", function(e) {
-        e.preventDefault(); 
+    $('.link-anchor').on("click", function (e) {
+        e.preventDefault();
         var mylink = $(this).attr('href');
         var positionblock = $(mylink).offset().top; //вычисляем позицию блока
-        if(window.matchMedia("(max-width: 1200px)").matches) {
+        if (window.matchMedia("(max-width: 1200px)").matches) {
             positionblock = positionblock - 90;
         }
-        $('html, body').animate({ scrollTop: positionblock }, 700); 
-      });
+        $('html, body').animate({ scrollTop: positionblock }, 700);
+    });
+
+    //Слайдер с фото-продуктов
+    var productsSlider = document.querySelector('.products-slider__slider');
+    if (productsSlider) {
+        function currentDevice() {
+            return window.matchMedia("(max-width: 960px)").matches;
+        }
+        var isMobile = currentDevice();
+
+        // if (!isMobile) { startProductsSlider(); }
+        startProductsSlider();
+        function startProductsSlider() {
+            $('.products-slider__slider').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<button class="products-slider__arrow products-slider__arrow--left" type="button"></button>',
+                nextArrow: '<button class="products-slider__arrow products-slider__arrow--right" type="button"></button>',
+                rows: 0,
+
+                responsive: [
+                    {
+                        breakpoint: 2000,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 960,
+                        settings: "unslick"
+                    }
+                ]
+            });
+        }
+
+        window.addEventListener('resize', checkDevice);
+        function checkDevice() {
+            var newDevice = currentDevice();
+
+            if (newDevice !== isMobile) {
+                isMobile = newDevice;
+                if(isMobile) {
+                    // $('.products-slider__slider').slick("unslick");
+                } else {
+                    startProductsSlider();
+                }
+            }
+        }
+    }
 
     /*Полифилы для ie*/
     if (!Element.prototype.matches) {

@@ -14,7 +14,7 @@
     }
 
     &__container {
-        padding: 20px 0;
+        padding        : 20px 0;
         min-height     : 389px;
         display        : flex;
         flex-direction : column;
@@ -23,8 +23,9 @@
         @media screen and (max-width: 960px) {
             min-height: 300px;
         }
+
         @media screen and (max-width: 670px) {
-            padding: 10px 0;
+            padding   : 10px 0;
             min-height: 389px;
         }
     }
@@ -44,8 +45,8 @@
 
     &__btn {
         @media screen and (max-width: 670px) {
-            width: 100%;
-            padding-left: 20px;
+            width        : 100%;
+            padding-left : 20px;
             padding-right: 20px;
         }
     }
@@ -54,28 +55,63 @@
 .banner--for-partners {
     .banner__title {
         text-align: left;
-        
+
         @media screen and (min-width: 961px) {
             font-weight: 400;
         }
+
         @media screen and (max-width: 960px) {
             text-align: center;
         }
+
         @media screen and (max-width: 670px) {
             text-align: left;
         }
     }
+
     .banner__btn {
         @media screen and (min-width: 961px) {
-            padding-left: 80px;
+            padding-left : 80px;
             padding-right: 80px;
         }
     }
 }
+
 .banner--special-request {
-    .banner__title { 
+    .banner__title {
         @media screen and (max-width: 670px) {
             text-align: left;
         }
+    }
+}
+
+.banner--other-products {
+    .banner__inner {
+        @media screen and (max-width: 960px) {
+            padding: 0 80px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 20px;
+        }
+    }
+    .banner__container {
+        padding: 119px 0 104px;
+
+        @media screen and (max-width: 960px) {
+            padding: 70px 0 40px;
+        }
+    }
+    .types-products__list-block {
+        padding-top: 88px;
+
+        @media screen and (max-width: 960px) {
+            padding-top: 41px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-top: 60px;
+        }
+    }
+    .types-products__row {
+        justify-content: center;
     }
 }

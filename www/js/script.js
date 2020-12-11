@@ -129,8 +129,60 @@ $(document).ready(function () {
     $('html, body').animate({
       scrollTop: positionblock
     }, 700);
-  });
+  }); //Слайдер с фото-продуктов
+
+  var productsSlider = document.querySelector('.products-slider__slider');
+
+  if (productsSlider) {
+    var currentDevice = function currentDevice() {
+      return window.matchMedia("(max-width: 960px)").matches;
+    };
+
+    var startProductsSlider = function startProductsSlider() {
+      $('.products-slider__slider').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button class="products-slider__arrow products-slider__arrow--left" type="button"></button>',
+        nextArrow: '<button class="products-slider__arrow products-slider__arrow--right" type="button"></button>',
+        rows: 0,
+        responsive: [{
+          breakpoint: 2000,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 960,
+          settings: "unslick"
+        }]
+      });
+    };
+
+    var _checkDevice = function _checkDevice() {
+      var newDevice = currentDevice();
+
+      if (newDevice !== isMobile) {
+        isMobile = newDevice;
+
+        if (isMobile) {// $('.products-slider__slider').slick("unslick");
+        } else {
+          startProductsSlider();
+        }
+      }
+    };
+
+    var isMobile = currentDevice(); // if (!isMobile) { startProductsSlider(); }
+
+    startProductsSlider();
+    window.addEventListener('resize', _checkDevice);
+  }
   /*Полифилы для ie*/
+
 
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
