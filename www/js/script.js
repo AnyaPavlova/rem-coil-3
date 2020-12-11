@@ -180,9 +180,31 @@ $(document).ready(function () {
 
     startProductsSlider();
     window.addEventListener('resize', _checkDevice);
-  }
-  /*Полифилы для ie*/
+  } // Слайдер отзывов
 
+
+  $('#reviews-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    dots: true,
+    appendDots: $('.reviews__slider-dots'),
+    rows: 0,
+    responsive: [{
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 670,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+  /*Полифилы для ie*/
 
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
