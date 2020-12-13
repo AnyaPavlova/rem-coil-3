@@ -1,0 +1,66 @@
+.service-photo {
+    padding-bottom: 40px;
+
+    @media screen and (max-width: 960px) {
+        padding-bottom: 30px;
+    }
+    @media screen and (max-width: 670px) {
+        padding-bottom: 40px;
+    }
+
+    &__inner {
+        max-width: 1283px;
+
+        @media screen and (max-width: 1040px) {
+            padding: 0 70px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 30px;
+        }
+    }
+    &__row {
+        @media screen and (max-width: 960px) {
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+    }
+    &__col {
+        padding-bottom: 20px; 
+
+        @media screen and (max-width: 960px) {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 14px;
+        }
+    }
+    &__picture {
+        overflow: hidden;
+    }
+    &__photo {
+        width: 100%;
+        transition: all 0.5s;
+
+        @media screen and (min-width: 1201px) {
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    
+    &__signature {
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+
+        @media screen and (max-width: 960px) {
+            text-align: left;
+            font-size: 11px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-top: 6px;
+            font-size: 14px;
+        }
+    }
+}
