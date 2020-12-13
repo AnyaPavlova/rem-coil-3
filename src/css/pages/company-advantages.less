@@ -1,0 +1,105 @@
+.company-advantages {
+    padding: 84px 0 80px;
+    
+    @media screen and (max-width: 960px) {
+        padding: 40px 0 0;
+    }
+    @media screen and (max-width: 670px) {
+        padding-top: 20px;
+    }
+
+    &__title {
+        text-align: center;
+        padding-bottom: 67px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 40px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 60px;
+        }
+    }
+    &__row {
+        justify-content: space-between;
+    }
+    &__col {
+        padding-bottom: 80px;
+
+        @media screen and (max-width: 670px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+    }
+    &__item {
+        position: relative;
+        font-weight: 700;
+        padding-top: 104px;
+        text-align: center;
+
+        @media screen and (max-width: 670px) {
+            padding-top: 77px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--location {
+            width: 85px;
+
+            &:before {
+                background-image: url(../images/company/company-icon-01.svg);
+                width: 57px;
+                height: 57px;
+            }
+        }
+        &--cost {
+            width: 157px;
+
+            &:before {
+                background-image: url(../images/company/company-icon-02.svg);
+                width: 85px;
+                height: 57px;
+            }
+        }
+        &--professionals {
+            width: 151px;
+
+            &:before {
+                background-image: url(../images/company/company-icon-03.svg);
+                width: 63px;
+                height: 69px;
+            }
+        }
+        &--transport {
+            width: 134px;
+
+            @media screen and (max-width: 670px) {
+                padding-top: 55px;
+            }
+
+            &:before {
+                background-image: url(../images/company/company-icon-04.svg);
+                width: 68px;
+                height: 47px;
+                top: 22px;
+
+                @media screen and (max-width: 670px) {
+                    top: 0;
+                }
+            }
+        }
+    }
+}

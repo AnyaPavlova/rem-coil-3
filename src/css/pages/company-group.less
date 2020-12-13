@@ -1,0 +1,94 @@
+.company-group {
+    padding: 120px 0 60px;
+
+    @media screen and (max-width: 960px) {
+        padding: 80px 0 16px;
+    }
+
+    &__inner {
+        @media screen and (max-width: 670px) {
+            padding: 0 35px;
+        }
+    }
+
+    &__title {
+        padding-bottom: 60px;
+        text-align    : center;
+
+        @media screen and (max-width: 670px) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__row {
+        margin-left : -15px;
+        margin-right: -15px;
+    }
+
+    &__col {
+        padding-left  : 15px;
+        padding-right : 15px;
+        padding-bottom: 24px;
+    }
+
+    &__item {
+        display       : flex;
+        flex-direction: column;
+        height        : 100%;
+    }
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__logo-block {
+        height         : 121px;
+        display        : flex;
+        align-content  : center;
+        align-items    : center;
+        justify-content: center;
+        border         : 2px solid #DDDDDD;
+        border-top     : 0;
+
+        @media screen and (max-width: 670px) {
+            border: 0;
+            order : 1;
+            justify-content: flex-start;
+            height: auto;
+            padding: 20px 0 36px;
+        }
+    }
+
+    &__info-block {
+        flex-grow     : 1;
+        display       : flex;
+        flex-direction: column;
+        padding-top   : 61px;
+
+        @media screen and (max-width: 960px) {
+            padding-top: 20px;
+        }
+    }
+
+    &__text {
+        flex-grow     : 1;
+        padding-bottom: 25px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__btn-block {
+        @media screen and (max-width: 670px) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        min-width  : 196px;
+        font-weight: 700;
+    }
+
+
+}

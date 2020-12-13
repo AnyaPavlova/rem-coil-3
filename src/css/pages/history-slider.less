@@ -1,0 +1,133 @@
+.history-slider {
+
+    &__inner {
+        @media screen and (max-width: 670px) {
+            padding: 0 24px;
+        }
+    }
+
+    &__item {        
+        display   : block;
+        background: #666666;
+        color     : #ffffff;
+ 
+        &--light-gray {
+            background: #BDBDBD;
+        }
+
+        &--gray {
+            background: #999999;
+        }
+
+        &--dark-gray {
+            background: #888888;
+        }
+    }
+
+    &__info {
+        width     : 312px;
+        height    : 312px;
+        padding   : 33px;
+ 
+        @media screen and (max-width: 960px) {
+            width : 225px;
+            height: 225px;
+
+            padding: 20px 20px 20px 33px;
+        }
+
+        @media screen and (max-width: 670px) {
+            width: 100%;
+            padding: 0 33px 100%;
+            height: 0;
+            position: relative;
+        }
+    }
+
+    &__year {
+        font-size     : 60px;
+        font-weight   : 900;
+        padding-bottom: 26px;
+
+        @media screen and (max-width: 960px) {
+            font-size: 36px;
+            padding-bottom: 20px;
+        }
+        @media screen and (max-width: 670px)  {
+            padding-top: 33px;
+            font-size: 60px;
+            padding-bottom: 26px;
+        }
+    }
+
+    &__item-text {
+        font-size  : 21px;
+        font-weight: 700;
+
+        @media screen and (max-width: 960px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 670px)  {
+            font-size: 21px;
+        }
+    }
+}
+
+.history-slider__arrow {
+    position       : absolute;
+    top            : 0;
+    bottom         : 0;
+    margin         : auto;
+    width          : 21px;
+    height         : 36px;
+    z-index        : 5;
+    background     : url(../images/icons/slider-arrow-white.svg) no-repeat center;
+    background-size: contain;
+
+    &--left {
+        left: 49px;
+
+        @media screen and (max-width: 960px) {
+            left: 36px;
+        }
+    }
+
+    &--right {
+        right    : 49px;
+        transform: rotate(180deg);
+
+        @media screen and (max-width: 960px) {
+            right: 36px;
+        }
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .history-slider__item {
+
+        &--1973,
+        &--2017 {
+            .history-slider__item-text {
+                font-size: 26px;
+            }
+        }
+
+        &--1987 {
+            .history-slider__item-text {
+                font-size: 24px;
+            }
+        }
+
+        &--2007 {
+            .history-slider__item-text {
+                font-size: 25px;
+            }
+        }
+
+        &--another {
+            .history-slider__year {
+                font-size: 55px;
+            }
+        }
+    }
+}

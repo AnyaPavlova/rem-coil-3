@@ -203,6 +203,27 @@ $(document).ready(function () {
         slidesToScroll: 1
       }
     }]
+  }); // Слайдер истории компании
+
+  $('#history-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    rows: 0,
+    variableWidth: true,
+    prevArrow: '<button class="history-slider__arrow history-slider__arrow--left" type="button"></button>',
+    nextArrow: '<button class="history-slider__arrow history-slider__arrow--right" type="button"></button>',
+    speed: 1000,
+    autoplay: true,
+    pauseOnHover: false,
+    autoplaySpeed: 3000,
+    responsive: [{
+      breakpoint: 670,
+      settings: {
+        variableWidth: false,
+        arrows: false
+      }
+    }]
   });
   /*Полифилы для ie*/
 

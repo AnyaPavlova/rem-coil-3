@@ -18,6 +18,10 @@
         }
     }
 
+    &__row {
+        justify-content: center;
+    }
+
     &__title {
         display       : flex;
         flex-direction: column;
@@ -64,4 +68,15 @@
         }
     }
 
+}
+
+.title-block--company {
+    .title-block__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 67px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 20px;
+        }
+    }
 }
