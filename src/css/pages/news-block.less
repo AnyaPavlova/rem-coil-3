@@ -1,0 +1,33 @@
+.news-block {
+    padding-bottom: 120px;
+
+    @media screen and (max-width: 960px) {
+        padding-bottom: 80px;
+    }
+    @media screen and (max-width: 670px) {
+        padding-bottom: 58px;
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 81px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 34px;
+        }
+    }
+    &__news {
+        padding-bottom: 30px;
+        
+        @media screen and (max-width: 960px) {
+            padding: 0;
+        }
+    }
+
+    &__btns-block {
+        text-align: center;
+    }
+    &__btn {
+        min-width: 234px;
+    }
+}

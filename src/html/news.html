@@ -1,0 +1,133 @@
+@@include('./main/head.html', {
+"title": "News | Rem&Coil"
+})
+@@include('./main/header.html')
+
+<section class="title-block">
+    <div class="title-block__inner inner--initial">
+        <div class="title-block__container">
+            <h1 class="title-block__title">
+                <span class="title-block__title-note">NEWS & EVENTS</span>
+                <span class="title-block__title-name">News</span>
+            </h1>
+        </div>
+    </div>
+</section>
+
+<section class="news-promo-text">
+    <div class="inner inner--small news-promo-text__inner">
+        <h3 class="news-promo-text__title">Coil Partners carefully monitors every change and all the developments in the industry. Check this section regularly to find out what inspires Coil Partners and where you will be able to find us during upcoming events.</h3>
+    </div>
+</section>
+
+<div class="news-block">
+    <div class="inner inner--small news-block__inner">
+        <div class="news-main news-block__news">
+            <div class="row news-main__row">
+                <div class="col col-4 col-md-6 news-main__col">
+                    <a href="#" class="news-main__item">
+                        <div class="news-main__photo-block"><img src="./images/company/01.jpg" alt="Photo" class="news-main__photo"></div>
+                        <div class="news-main__text-block">
+                            <p class="news-main__text">We have something to tell you...</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-4 col-md-6 news-main__col">
+                    <a href="#" class="news-main__item">
+                        <div class="news-main__photo-block"><img src="./images/company/02.jpg" alt="Photo" class="news-main__photo"></div>
+                        <div class="news-main__text-block">
+                            <p class="news-main__text">Come and take a look around!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-4 col-md-6 news-main__col">
+                    <a href="#" class="news-main__item">
+                        <div class="news-main__photo-block"><img src="./images/company/03.jpg" alt="Photo" class="news-main__photo"></div>
+                        <div class="news-main__text-block">
+                            <p class="news-main__text">Ain’t no stopping us now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="news-block__btns-block">
+            <a href="#" class="btn news-block__btn">NEWS ARCHIVE</a>
+        </div>
+    </div>
+</div>
+
+<section class="subscribe" id="subscribe">
+    <div class="inner subscribe__inner">
+        <div class="subscribe__form">
+
+            <form class="subscribe-form subscribe-form--news" action="jquery-mailer.php" method="post" novalidate>
+                <input type="hidden" value="subscribe" name="formType" />
+                <input value="Форма подписки" type="hidden" name="formSubject" />
+
+                <div class="subscribe__row row">
+                    <div class="subscribe__col subscribe__col-title col col-4">
+                        <h2 class="subscribe-form__title subscribe-form__title--in-news">Don't miss out on any news & stay up to date. Subscribe now to our newsletter. </h2>
+                    </div>
+                    <div class="subscribe__col subscribe__col-form col col-8">
+                        <div class="subscribe-form__for-input">
+                            <input type="text" name="name" class="subscribe-form__input" placeholder="Name" required>
+                        </div>
+                        <div class="subscribe-form__for-input">
+                            <input type="text" name="company" class="subscribe-form__input" placeholder="Compamy">
+                        </div>
+                        <div class="subscribe-form__for-input">
+                            <input type="email" name="email" class="subscribe-form__input" placeholder="E-mail address" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subscribe-form__btns-block">
+                    <button type="submit" class="subscribe-form__btn">
+                        <span>Subscribe & submit</span>
+                        <svg viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.703 26.906c0-.144.056-.288.17-.398l7.186-7.008-7.187-7.007a.56.56 0 01-.17-.398.55.55 0 01.17-.399.587.587 0 01.82 0l7.594 7.406a.562.562 0 01.17.398.55.55 0 01-.17.399l-7.595 7.406a.585.585 0 01-.63.122.578.578 0 01-.26-.208.556.556 0 01-.098-.313v0z" />
+                            <path d="M1.5 36.974V2.026a.551.551 0 01.17-.4.58.58 0 01.41-.164h35.84a.591.591 0 01.41.165.563.563 0 01.17.399v34.948a.552.552 0 01-.17.4.579.579 0 01-.41.164H2.08a.59.59 0 01-.41-.164.563.563 0 01-.17-.4zM2.659 2.59v33.822H37.34V2.589H2.66z" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<div class="news-photo">
+    <div class="inner inner--all news-photo__inner">
+        <div class="news-photo__photo-block">
+            <div class="news-photo__picture">
+                <picture>
+                    <source srcset="./images/news/news-photo-mob.jpg" media="(max-width: 670px)">
+                    <source srcset="./images/news/news-photo-ipad.jpg" media="(max-width: 960px)">
+                    <source srcset="./images/news/news-photo.jpg">
+                    <img src="./images/news/news-photo.jpg" alt="Photo" class="news-photo__photo">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="events">
+    
+</section>
+
+<section class="banner banner--our-people">
+    <div class="banner__inner inner--initial">
+        <div class="banner__row row">
+            <div class="banner__col col col-8 col-md-12">
+                <div class="banner__container">
+                    <h2 class="banner__title">Want to stay in tune?</h2>
+                    <div class="banner__btns-block">
+                        <a href="#subscribe" class="btn banner__btn link-anchor">SUBSCRIBE TO OUR NEWSLETTER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./main/footer.html')
