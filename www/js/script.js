@@ -224,8 +224,29 @@ $(document).ready(function () {
         arrows: false
       }
     }]
-  });
+  }); //Аккордион мероприятий
+
+  var eventsArr = document.querySelectorAll('.event');
+
+  if (eventsArr.length !== 0) {
+    var toggleEventInfo = function toggleEventInfo(event) {
+      var activeEvent = document.querySelector('.event__name--open');
+
+      if (activeEvent && activeEvent !== this) {
+        activeEvent.classList.remove('event__name--open');
+        $(activeEvent.closest('.event').querySelector('.event__info')).hide(300);
+      }
+
+      this.classList.toggle('event__name--open');
+      $(this.closest('.event').querySelector('.event__info')).toggle(300);
+    };
+
+    for (var i = 0; i < eventsArr.length; i++) {
+      eventsArr[i].querySelector('.event__name').addEventListener('click', toggleEventInfo);
+    }
+  }
   /*Полифилы для ie*/
+
 
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
