@@ -244,6 +244,57 @@ $(document).ready(function () {
     for (var i = 0; i < eventsArr.length; i++) {
       eventsArr[i].querySelector('.event__name').addEventListener('click', toggleEventInfo);
     }
+  } // Поиск по сайту
+
+
+  var searchBtn = document.querySelector('#search-btn');
+
+  if (searchBtn) {
+    var openSearchBlock = function openSearchBlock(event) {
+      searchBlock.classList.add('search-block__search--open');
+      searchBtn.classList.add('search-block__btn--hide');
+    };
+
+    searchBtn.addEventListener('click', openSearchBlock);
+    var searchBlock = document.querySelector('#search-block');
+    var btnCloseSearch = searchBlock.querySelector('#search-close');
+    btnCloseSearch.addEventListener('click', function () {
+      searchBlock.classList.remove('search-block__search--open');
+      searchBtn.classList.remove('search-block__btn--hide');
+    });
+  } //Открытие вариантов фильтра новостей в моб. версии
+
+
+  var btnOpenFiltersNews = document.querySelector('#news-filters-choise');
+
+  if (btnOpenFiltersNews) {
+    var toggleFiltersNews = function toggleFiltersNews(event) {
+      if (window.matchMedia("(max-width: 670px)").matches) {
+        btnOpenFiltersNews.classList.toggle('news-archive__filter-title-mob--open');
+        document.querySelector('.news-filter').classList.toggle('news-filter--open');
+      }
+    }; //Смена выбранного фильтра (для моб.)
+
+
+    btnOpenFiltersNews.addEventListener('click', toggleFiltersNews);
+
+    if (window.matchMedia("(max-width: 670px)").matches) {
+      var changeChoiseFilterNews = function changeChoiseFilterNews(event) {
+        var newChoiseFilterNews = this.value;
+        btnOpenFiltersNews.querySelector('.news-filter__label').innerHTML = newChoiseFilterNews;
+      };
+
+      var filtersNewsArr = document.querySelectorAll('.news-filter__checkbox');
+
+      for (var i = 0; i < filtersNewsArr.length; i++) {
+        filtersNewsArr[i].addEventListener('click', changeChoiseFilterNews);
+
+        if (filtersNewsArr[i].checked) {
+          var choiseFilterNews = filtersNewsArr[i].value;
+          btnOpenFiltersNews.querySelector('.news-filter__label').innerHTML = choiseFilterNews;
+        }
+      }
+    }
   }
   /*Полифилы для ie*/
 

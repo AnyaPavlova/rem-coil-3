@@ -1,0 +1,53 @@
+.news-filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+    @media screen and (max-width: 670px) {
+        margin: 0 -10px;        
+        padding-top: 15px;
+        justify-content: space-between;
+
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        // transition: all 0.5s;
+
+        width: calc( 200% + 20px );
+
+        &--open {
+            height: auto;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }    
+
+    &__for-checkbox {
+        padding: 5px 20px;        
+        
+        @media screen and (max-width: 670px) {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.news-filter__checkbox {
+    display   : block;
+    visibility: visible;
+    opacity   : 0;
+    position  : absolute;
+}
+.news-filter__label {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: #666666;
+
+    &:hover {
+        color: @color-black;
+    }
+}
+.news-filter__checkbox:checked + .news-filter__label {
+    color: @color-orange;
+}

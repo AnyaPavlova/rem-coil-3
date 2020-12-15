@@ -1,0 +1,91 @@
+.news-archive {
+    padding: 75px 0 110px;
+
+    @media screen and (max-width: 960px) {
+        padding: 75px 0 89px;
+    }
+    @media screen and (max-width: 670px) {
+        padding: 55px 0 80px;
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 82px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 36px;
+        }
+    }
+
+    &__top-line {
+        padding-bottom: 55px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 36px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 10px;
+            align-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+    &__filter {
+        width: calc( 100% - 200px );
+
+        @media screen and (max-width: 670px) {
+            width: 50%;
+        }
+    }
+    &__search {
+        width: 200px;
+
+         @media screen and (max-width: 670px) {
+            width: 50%;
+        }
+    }   
+
+    &__filter-title-mob {
+        display: none;
+
+        @media screen and (max-width: 670px) {
+            display: block;            
+            position: relative;
+            margin-top: 7px;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 9px;
+                background: url(../images/icons/arrow-down-filter.svg);
+                position: absolute;
+                right: 15px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background-size: contain;
+                transition: all 0.5s;
+            }
+
+            &--open:after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    &__news {
+        padding-bottom: 24px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 18px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 44px;
+        }
+    }
+}
