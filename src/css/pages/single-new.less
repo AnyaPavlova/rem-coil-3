@@ -1,0 +1,141 @@
+.single-new {
+    padding: 100px 0 93px;
+
+    @media screen and (max-width: 960px) {
+        padding: 0;
+    }
+
+    &__inner {
+        @media screen and (max-width: 960px) {
+            padding: 0 69px;
+        }
+    }
+    &__row {
+        justify-content: center;
+    }
+    &__col {
+        @media screen and (max-width: 960px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__btns-block {
+        padding-bottom: 68px;
+        margin: 0 -14px;
+
+        @media screen and (max-width: 960px) {
+            order: 1;
+            padding-bottom: 24px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 28px;
+            text-align: center;
+        }
+    }
+    &__btn {
+        margin: 0 14px 14px;
+        min-width: 142px;
+        padding: 9px 32px;   
+        font-size: 15px;
+
+        @media screen and (max-width: 670px) {
+            min-width: 250px;
+        }
+    }
+
+    &__info {
+        padding-bottom: 58px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 48px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 45px;
+        }
+    }
+    &__date {
+        font-size: 14px;
+        line-height: 1.5;
+        padding-bottom: 28px;
+    }
+    &__title {
+        font-size: 44px;
+        margin-bottom: 23px;
+
+        @media screen and (max-width: 960px) {
+            font-size: 36px;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 34px;
+        }
+    }
+    &__link-block {
+        @media screen and (max-width: 960px) {
+            padding-top: 18px;
+        } 
+        @media screen and (max-width: 670px) {
+            padding-top: 22px;
+        }
+    }
+    &__link {
+        font-size: 18px;
+        color: @color-orange;
+    }
+    &__text {
+        h2, h3 {
+            padding-bottom: 23px;
+        }
+        h2 {
+            font-size: 41px;
+
+            @media screen and (max-width: 960px) {
+                font-size: 33px;
+            }
+            @media screen and (max-width: 670px) {
+                font-size: 30px;
+            }
+        }
+        p {
+            padding-bottom: 23px;
+            font-size: 18px;
+        }
+        a {
+            color: @color-orange;
+        }
+        ul {
+            list-style: none;
+            font-size: 18px;
+            padding-bottom: 23px;
+        }
+        li {
+            margin-bottom: 2px;
+            position: relative;
+            padding-left: 18px;
+    
+            &:before {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #000;
+                position: absolute;
+                top: 8px;
+                left: 0;
+            }
+        }
+    }
+    
+    &__socials {
+        border-top: 1px solid #333333;
+        padding: 21px 0;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 80px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-bottom: 42px;
+        }
+    }
+}

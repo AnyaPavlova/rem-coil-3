@@ -318,7 +318,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   //Form
-  var formInPage = document.querySelectorAll('form');
+  var formInPage = document.querySelectorAll('.form');
 
   if (formInPage.length !== 0) {
     for (var formItem = 0; formItem < formInPage.length; formItem++) {
