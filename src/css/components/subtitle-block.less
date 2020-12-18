@@ -23,6 +23,18 @@
         flex-direction: column;
         padding: 50px 0;
 
+        &-num {
+            font-size: 150px;
+            font-weight: 700;
+            margin-bottom: -30px;
+            font-family: 'Montserrat', sans-serif;
+
+            @media screen and (max-width: 960px) {
+                font-size: 120px;
+                margin-bottom: -20px;
+            }
+        }
+
         &-name {
             font-size  : 50px;
             font-weight: 900;
@@ -42,8 +54,13 @@
 
     &__breadcrumbs {
         position: absolute;
-        top: 41px;
+        top: 42px;
         left: 0;
+        font-size: 12px;
+
+        @media screen and (max-width: 960px) {
+            top: 30px;
+        }
 
         @media screen and (max-width: 670px) {
             top: auto;
@@ -51,4 +68,17 @@
         }
     }
 
+}
+
+.subtitle-block--cases {
+    .subtitle-block__title-name {
+        font-weight: 700;
+
+        @media screen and (max-width: 960px) {
+            text-align: left;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 36px;
+        }
+    }
 }

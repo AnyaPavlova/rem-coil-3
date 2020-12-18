@@ -1,0 +1,85 @@
+.single-review {
+    padding: 60px 0 73px;
+
+    @media screen and (max-width: 960px) {
+        padding: 30px 0;
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 69px;
+        }
+    }
+
+    &__text-block {
+        font-size: 26px;
+        padding-bottom: 64px;
+
+        padding-right: 80px;
+
+        @media screen and (max-width: 1040px) {
+            padding-right: 0;
+        }
+        @media screen and (max-width: 960px) {
+            padding: 0 13px 50px;
+            font-size: 18px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 0 50px;
+            font-size: 16px;
+        }
+    }
+
+    &__text {
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+    }
+
+    &__author {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 960px) {
+            padding: 0 58px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0;
+        }
+    }
+    &__author-photo-block {
+        width: 91px;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 34px;
+            height: 27px;
+            display: block;
+            background: url(../images/icons/bq-icon.svg) no-repeat center;
+            background-size: contain;
+            position: absolute;
+            right: -7px;
+            top: -6px;
+        }
+    }
+    &__author-photo {
+        border-radius: 50%;
+    }
+
+    &__author-name {
+        width: calc( 100% - 91px );
+        padding-left: 29px;
+        padding-top: 12px;
+        font-size: 19px;
+
+        @media screen and (max-width: 960px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-left: 21px;
+            font-size: 16px;
+        }
+    }
+
+}

@@ -1,0 +1,80 @@
+.cases-navigavion {    
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 69px;
+        }
+    }
+    
+    &__container {
+        padding: 43px 0 55px;
+        border-top: 2px solid @color-black;
+
+        @media screen and (max-width: 1040px) {
+            padding: 40px 0 80px;
+        }
+        @media screen and (max-width: 960px) {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    &__btn-block {
+        width: 56px;
+    }
+    &__link-block {
+        max-width: calc( 100% - 56px*2 );
+    }
+    &__link {
+        @media screen and (max-width: 670px) {
+            font-size: 20px;
+        }
+    }
+
+    &__btn {        
+        
+        svg {
+            width: 56px;
+            height: 56px;
+            fill: #000000;
+            transition: all 0.5s;
+
+        }
+
+        &--prev {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        
+        @media screen and (min-width: 1201px) {
+            &:hover {
+                svg {
+                    fill: @color-orange;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        text-decoration: none;
+
+        @media screen and (min-width: 1201px) {
+            &:hover {
+                color: @color-orange;
+            }
+        }
+    }
+}

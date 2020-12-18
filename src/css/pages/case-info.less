@@ -1,0 +1,50 @@
+.case-info {
+    margin-top: -25px;
+    background: @color-gray;
+    padding-bottom: 50px;
+
+    @media screen and (max-width: 960px) {
+        margin-top: 0;
+        background: #ffffff;
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+
+    &__container {
+        padding-right: 80px;
+
+        @media screen and (max-width: 1040px) {
+            padding-right: 0;
+        }
+    }
+    &__row {
+        margin: 0 -18px;
+
+        @media screen and (max-width: 960px) {
+            margin: 0 -15px;
+        }
+    }
+    &__col {
+        padding: 0 18px 5px;
+
+        @media screen and (max-width: 960px) {
+            padding: 0 15px 20px;
+        }
+    }
+    &__item {
+        @media screen and (max-width: 960px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 16px;
+        }
+        
+        p {
+            padding-bottom: 25px;
+
+            @media screen and (max-width: 960px) {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
