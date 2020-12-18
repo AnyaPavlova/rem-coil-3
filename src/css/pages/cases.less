@@ -1,0 +1,65 @@
+.cases {
+
+    @media screen and (max-width: 960px) {
+        padding-bottom: 10px;
+    }
+
+    &__inner {
+        @media screen and (max-width: 1040px) {
+            padding: 0 85px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 37px;
+        }
+    }
+
+    &__row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &__col {
+        padding: 0 15px 30px;
+    }
+    &__item {
+        background: #999999;
+        padding: 9px 31px 39px 27px;        
+        display: block;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        transition: all 0.5s;
+
+        @media screen and (min-width: 1201px) {
+            &:hover {
+                background: @color-orange;
+            }
+        }
+    }
+    &__num {
+        font-size: 95px;
+        font-weight: 700;
+        padding-bottom: 13px;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    &__text {
+        font-size: 20px;
+    }
+    &__btn {
+        position: absolute;
+        top: 31px;
+        right: 31px;
+        display: block;
+
+        svg {
+            display: block;
+            width: 40px;
+            height: 39px;
+            fill: #ffffff;
+            stroke: #ffffff;
+        }
+    }
+}
