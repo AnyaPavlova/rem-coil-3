@@ -1,0 +1,245 @@
+@@include('./main/head.html', {
+"title": "Contacts | Rem&Coil"
+})
+@@include('./main/header.html')
+
+<section class="title-block title-block--contacts">
+    <div class="title-block__inner inner--initial">
+        <div class="title-block__container">
+            <div class="title-block__row row">
+                <div class="title-block__col col col-9 col-md-12">
+                    <h1 class="title-block__title">
+                        <span class="title-block__title-name">We’re always winding, but we love to make time for you! Tell us your story and we’ll find a solution.</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts-form-block">
+    <div class="inner contacts-form-block__inner">
+
+        <div class="contacts-form-block__row row">
+            <div class="contacts-form-block__col contacts-form-block__col--small col">
+                <div class="contacts-form-block__text">
+                    <div class="contacts-form-block__text-item">
+                        <p>
+                            Coil Partners Bobinaj San. VE Tic.A.S. <br>
+                            Tel. <a href="tel:+908502592645">+90 850 259 26 45</a> <br>
+                            <a href="mailto:info@coilpartners.com">info@coilpartners.com</a>
+                        </p>
+                    </div>
+                    <div class="contacts-form-block__text-item">
+                        <p>
+                            Mecidiye Mh. Sel.uk Cad. No: 85 <br>
+                            34930 Sultanbeyli <br>
+                            ISTANBUL / TURKEY
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-form-block__col contacts-form-block__col--big col">
+                <div class="contacts-form-block__form">
+
+                    <form class="contacts-form form" action="jquery-mailer.php" method="post" novalidate>
+                        <input type="hidden" value="feedback" name="formType" />
+                        <input value="Форма обратной связи" type="hidden" name="formSubject" />
+
+                        <div class="contacts-form__row row">
+                            <div class="contacts-form__col col col-6">
+                                <div class="contacts-form__for-input">
+                                    <input type="text" name="name" class="contacts-form__input" placeholder="First name" required>
+                                </div>
+                            </div>
+                            <div class="contacts-form__col col col-6">
+                                <div class="contacts-form__for-input">
+                                    <input type="text" name="secondname" class="contacts-form__input" placeholder="Family name">
+                                </div>
+                            </div>
+                            <div class="contacts-form__col col col-6">
+                                <div class="contacts-form__for-input">
+                                    <input type="text" name="company" class="contacts-form__input" placeholder="Compamy">
+                                </div>
+                            </div>
+                            <div class="contacts-form__col col col-6">
+                                <div class="contacts-form__for-input">
+                                    <input type="email" name="email" class="contacts-form__input" placeholder="Email address" required>
+                                </div>
+                            </div>
+                            <div class="contacts-form__col col col-12">
+                                <div class="contacts-form__for-input">
+                                    <input type="text" name="subject" class="contacts-form__input" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="contacts-form__col col col-12">
+                                <div class="contacts-form__for-input">
+                                    <textarea class="contacts-form__textarea" name="message" placeholder="Your message" rows="5" required></textarea>
+                                </div>
+                            </div>
+                            <div class="contacts-form__col col col-12">
+                                <div class="contacts-form__for-checkbox">
+                                    <input class="contacts-form__checkbox" id="agre-contacts" type="checkbox" name="agree[]" value="I agree with the privacy policy of Coil Partners." required>
+                                    <label for="agre-contacts" class="contacts-form__label-checkbox">
+                                        <span class="contacts-form__check"></span>
+                                        <span class="contacts-form__check-text">I agree with the privacy policy of Coil Partners.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contacts-form__btns-block">
+                            <button type="submit" class="contacts-form__btn">
+                                <span>Send my message</span>
+                                <svg viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.703 26.906c0-.144.056-.288.17-.398l7.186-7.008-7.187-7.007a.56.56 0 01-.17-.398.55.55 0 01.17-.399.587.587 0 01.82 0l7.594 7.406a.562.562 0 01.17.398.55.55 0 01-.17.399l-7.595 7.406a.585.585 0 01-.63.122.578.578 0 01-.26-.208.556.556 0 01-.098-.313v0z" />
+                                    <path d="M1.5 36.974V2.026a.551.551 0 01.17-.4.58.58 0 01.41-.164h35.84a.591.591 0 01.41.165.563.563 0 01.17.399v34.948a.552.552 0 01-.17.4.579.579 0 01-.41.164H2.08a.59.59 0 01-.41-.164.563.563 0 01-.17-.4zM2.659 2.59v33.822H37.34V2.589H2.66z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="our-team">
+    <div class="our-team__inner inner inner--small">
+        <div class="our-team__title-block">
+            <div class="inner">
+                <h2 class="our-team__title">
+                    <span class="our-team__title-note">OUR TEAM</span>
+                    <span class="our-team__title-name">Contact us</span>
+                </h2>
+            </div>
+        </div>
+        
+        <div class="team">
+            <div class="team__row row">
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/01.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Kamil TEKIN</p>
+                            <p class="team__position">General Manager</p>
+                            <p class="team__email"><a href="mailto:kamil.tekin@coilpartners.com">kamil.tekin@coilpartners.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/02.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Ensar POLAT</p>
+                            <p class="team__position">Quality Manager</p>
+                            <p class="team__email"><a href="mailto:ensar.polat@coilpartners.com">ensar.polat@coilpartners.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/03.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Emre KAYA</p>
+                            <p class="team__position">Production Manager</p>
+                            <p class="team__email"><a href="mailto:emre.kaya@coilpartners.com">emre.kaya@coilpartners.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/04.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Ferhat BULUT</p>
+                            <p class="team__position">Area Sales Manager</p>
+                            <p class="team__email"><a href="mailto:ferhat.bulut@coilpartners.com">ferhat.bulut@coilpartners.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/05.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Ken JOHNSON</p>
+                            <p class="team__position">North America</p>
+                            <p class="team__email"><a href="mailto:kenjco@flash.net">kenjco@flash.net</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/06.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Jakub FOJTIK</p>
+                            <p class="team__position">Branch Prague</p>
+                            <p class="team__email"><a href="mailto:jakub.fojtik@coilpartners.com">jakub.fojtik@coilpartners.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/07.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Saide ARAT</p>
+                            <p class="team__position">Res. Commerciale Francophone</p>
+                            <p class="team__email"><a href="mailto:saide.arat@coilpartners.com">saide.arat@coilpartners.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__col col col-4 col-md-6">
+                    <div class="team__item">
+                        <div class="team__photo-block">
+                            <img src="./images/contacts/08.jpg" alt="Photo" class="team__photo">
+                        </div>
+                        <div class="team__info">
+                            <p class="team__name">Johan DE COSTER</p>
+                            <p class="team__position">Chairman</p>
+                            <p class="team__email"><a href="mailto:johan.de.coster@outlook.be">johan.de.coster@outlook.be</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contacts-map">
+    <div class="contacts-map__title-block">
+        <div class="inner contacts-map__inner">
+            <h2 class="contacts-map__title">Our worldwide scope</h2>
+        </div>
+    </div>
+    <div class="contacts-map__map">
+        <div class="contacts-map__inner-map inner inner--all">
+            <div class="contacts-map__picture">
+                <picture>
+                    <source srcset="./images/map-mob.svg" media="(max-width: 670px)">
+                    <source srcset="./images/map-ipad.svg" media="(max-width: 960px)">
+                    <source srcset="./images/map.svg">
+                    <img src="./images/map.svg" alt="Photo" class="contacts-map__map-img">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./main/footer.html')

@@ -58,6 +58,8 @@
 		Фамилия:            ".(isset($_POST["secondname"]) ?             filter_var($_POST['secondname'],            FILTER_SANITIZE_STRING) :  null)."	
 		Компания:            ".(isset($_POST["company"]) ?             filter_var($_POST['company'],            FILTER_SANITIZE_STRING) :  null)."
 		E-mail:            ".(isset($_POST["email"]) ?             filter_var($_POST['email'],            FILTER_SANITIZE_STRING) :  null)." 				
+		Тема:            ".(isset($_POST["subject"]) ?             filter_var($_POST['subject'],            FILTER_SANITIZE_STRING) :  null)." 				
+		Сообщение:            ".(isset($_POST["message"]) ?             filter_var($_POST['message'],            FILTER_SANITIZE_STRING) :  null)." 				
 		Заявка: 				$_subject 
 		Время заявки:       ".date("Y-m-d H:i:s")."
 		";
