@@ -1,0 +1,114 @@
+.cookies {
+    background: #000000;
+    padding: 47px 0;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    z-index: 800;
+
+    transform: translateY(100%);
+    transition: transform 0.5s, opacity 0s 1s;       
+    opacity: 0;
+    pointer-events: none;
+
+    &--open {
+        transform: translateY(0);
+        bottom: 0;
+        opacity: 1;
+        pointer-events: auto;
+        transition: transform 0.5s;    
+    }
+
+    @media screen and (max-width: 670px) {
+        padding: 47px 0 40px;
+    }
+
+    &__inner {
+        max-width: 1150px;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 19px;
+        right: 36px;
+        display: block;
+
+        @media screen and (max-width: 670px) {
+            right: 19px;
+        }
+    }
+
+    &__row {
+        align-content: center;
+        align-items: center;
+
+        margin: 0 -15px;
+    }
+    &__col {
+        padding: 0 15px;
+    }
+
+    &__col-btns {
+        width: 342px;
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+        }
+    }
+    &__col-text {
+        width: calc( 100% - 342px );
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__text {
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    &__btns-block {
+        margin: 0 -7px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 960px) {
+            justify-content: center;
+        }
+
+    }
+    &__btn {
+        margin: 0 7px;
+        width: calc( 50% - 14px );
+        height: 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-size: 16px;
+
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        text-decoration: none;
+
+        @media screen and (max-width: 960px) {
+            width: 150px;
+        }
+
+        @media screen and (max-width: 670px) {
+            width: calc( 50% - 14px );
+        }
+    }
+    &__btn--white {
+        background-color: #ffffff;
+        color: #000;
+    }
+}

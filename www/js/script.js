@@ -295,6 +295,35 @@ $(document).ready(function () {
         }
       }
     }
+  } // Появление Cookies
+
+
+  var cookies = document.querySelector('.cookies');
+
+  if (cookies) {
+    workCookiesBlock();
+  } else {
+    console.log('no cookies');
+  }
+
+  function workCookiesBlock() {
+    openCookiesBlock();
+
+    function openCookiesBlock() {
+      setTimeout(function () {
+        cookies.classList.add('cookies--open');
+      }, 500);
+      var btnsCloseCookies = cookies.querySelectorAll('.cookies__close');
+
+      for (var i = 0; i < btnsCloseCookies.length; i++) {
+        btnsCloseCookies[i].addEventListener('click', closeCookiesBlock);
+      }
+    }
+
+    function closeCookiesBlock(event) {
+      event.preventDefault();
+      cookies.classList.remove('cookies--open');
+    }
   }
   /*Полифилы для ie*/
 
