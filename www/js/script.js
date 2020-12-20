@@ -69,7 +69,7 @@ $(document).ready(function () {
     };
 
     for (var i = 0; i < btnOpenSubmenuArr.length; i++) {
-      btnOpenSubmenuArr[i].addEventListener('click', openSubMenu);
+      btnOpenSubmenuArr[i].addEventListener('click', openSubMenu); //Для случаев когда у основного пункта меню нет ссылки
 
       if (!btnOpenSubmenuArr[i].closest('.menu__link').href) {
         btnOpenSubmenuArr[i].closest('.menu__link').querySelector('.menu__link-name').addEventListener('click', imitationClickBtnOpenSumbenu);
@@ -329,8 +329,6 @@ $(document).ready(function () {
 
   if (cookies) {
     workCookiesBlock();
-  } else {
-    console.log('no cookies');
   }
 
   function workCookiesBlock() {

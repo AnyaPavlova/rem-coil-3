@@ -39,9 +39,10 @@ $(document).ready(function () {
         for (var i = 0; i < btnOpenSubmenuArr.length; i++) {
             btnOpenSubmenuArr[i].addEventListener('click', openSubMenu);
 
+            //Для случаев когда у основного пункта меню нет ссылки
             if (!(btnOpenSubmenuArr[i].closest('.menu__link').href)) {
                 btnOpenSubmenuArr[i].closest('.menu__link').querySelector('.menu__link-name').addEventListener('click', imitationClickBtnOpenSumbenu);
-            }
+            } 
         }
         function openSubMenu(event) {
             event.preventDefault();
@@ -309,7 +310,7 @@ $(document).ready(function () {
 
     // Появление Cookies
     var cookies = document.querySelector('.cookies');
-    if (cookies) { workCookiesBlock(); } else { console.log('no cookies'); }
+    if (cookies) { workCookiesBlock(); } 
     function workCookiesBlock() {
         openCookiesBlock();
         function openCookiesBlock() {
