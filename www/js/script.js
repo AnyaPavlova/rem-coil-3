@@ -39,14 +39,41 @@ $(document).ready(function () {
   var btnOpenSubmenuArr = document.querySelectorAll('.menu__link-more');
 
   if (btnOpenSubmenuArr.length !== 0) {
-    for (var i = 0; i < btnOpenSubmenuArr.length; i++) {
-      var openSubMenu = function openSubMenu(event) {
-        event.preventDefault();
+    var openSubMenu = function openSubMenu(event) {
+      event.preventDefault();
+
+      if (window.matchMedia("(max-width: 1200px)").matches) {
         $(this.closest('.menu__item').querySelector('.submenu')).slideToggle(300);
         this.classList.toggle('menu__link-more--open');
-      };
+      }
+    };
 
+    var imitationClickBtnOpenSumbenu = function imitationClickBtnOpenSumbenu(event) {
+      //создаем событие клика по кнопке
+      var clickBtnOpenSubmenu;
+
+      if (typeof Event === 'function') {
+        clickBtnOpenSubmenu = new Event('click', {
+          bubbles: true,
+          cancelable: true
+        });
+      } else {
+        clickBtnOpenSubmenu = document.createEvent('Event');
+        clickBtnOpenSubmenu.initEvent('click', true, true);
+      }
+
+      this.parentNode.querySelector('.menu__link-more').dispatchEvent(clickBtnOpenSubmenu); //вызываем событие
+      //Запись не пододит для ie!
+      // var clickBtnOpenSubmenu = new Event('click', { bubbles: true, cancelable: true });
+      // this.querySelector('.menu__link-more').dispatchEvent(clickBtnOpenSubmenu); 
+    };
+
+    for (var i = 0; i < btnOpenSubmenuArr.length; i++) {
       btnOpenSubmenuArr[i].addEventListener('click', openSubMenu);
+
+      if (!btnOpenSubmenuArr[i].closest('.menu__link').href) {
+        btnOpenSubmenuArr[i].closest('.menu__link').querySelector('.menu__link-name').addEventListener('click', imitationClickBtnOpenSumbenu);
+      }
     }
   } //Промо-слайдер
 
