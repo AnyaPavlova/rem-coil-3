@@ -44,7 +44,7 @@
         }
 
         .faq-table td:nth-child(2) {
-            width: calc( 33.333% - 50px );
+            width: calc(33.333% - 50px);
         }
 
         .faq-table td:last-child {
@@ -63,6 +63,32 @@
         .faq a {
             color: #f7931d;
         }
+
+        .faq ul {
+            list-style: none;
+            padding-bottom: 7px;
+        }
+
+        .faq li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 16px;
+            padding-bottom: 10px;
+        }
+        .faq li:last-child {
+            padding-bottom: 0;
+        }
+
+        .faq li:before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #f7931d;
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
     </style>
 
 </head>
@@ -79,6 +105,7 @@
                         <td><a target="_blank" href="index.html">Главная страница</a></td>
                         <td>
                             <p>Данные формы отправляются на email</p>
+                            <p>В карусели важно соблюдать размеры картинок - всего бывает 3 размера, они <a href="https://s.mail.ru/7oTj/AfAew91UK" target="_blank">отмечены в самом слайдере</a> (если прокрутить подальше).</p>
                         </td>
                     </tr>
                     <tr>
@@ -195,6 +222,17 @@
                         </td>
                         <td>
                             <p>На этой страничке доп. добавлен всплывающий блок Cookie.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Примечания:</strong></td>
+                        <td>
+                            <ul>
+                                <li>В самой верстке (<a href="https://github.com/AnyaPavlova/rem-coil-3" target="_blank">тут</a>) активные пункты меню на страницах не отмечены. Ориентироваться по ним нужно по данному сайту.</li>
+                                <li>Подключен php-отправщик форм на email.</li>
+                                <li>Скрипт Yandex Share добавлен только для отдельных страниц <a target="_blank" href="single-new.html">новостей</a> и <a target="_blank" href="single-event.html">мероприятий</a>.</li>
+                            </ul>
                         </td>
                     </tr>
                 </table>
