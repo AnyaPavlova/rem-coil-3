@@ -1,7 +1,7 @@
 .promo-btns {
     position: relative;
 
-    @media screen and (max-width: 1040px) {
+    @media screen and (max-width: 1200px) {
         background: @color-black;
     }
 
@@ -44,6 +44,9 @@
         @media screen and (max-width: 670px) {
             width: 50%;
         }
+    }
+    &__col-main-btn {
+        background: @color-black;
     }
 
     &__btn {
@@ -101,8 +104,13 @@
         display        : flex;
         flex-wrap      : wrap;
         justify-content: space-between;
-        margin-left    : -20px;
-        width          : calc(100% + 20px);
+        margin-left: 80px;
+        width: auto;
+
+        @media screen and (max-width: 1200px) {
+            margin-left: 0;
+            width: 100%;
+        }
 
         @media screen and (max-width: 1040px) {
             margin-left: 0;

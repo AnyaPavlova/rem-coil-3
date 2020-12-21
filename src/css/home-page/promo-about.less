@@ -1,6 +1,6 @@
 .promo-about {
 
-    @media screen and (max-width: 1040px)  {
+    @media screen and (max-width: 1200px)  {
         background: @color-black;
     }
 
@@ -33,6 +33,12 @@
     &__container {
         background: @color-black;
         color: #ffffff;
+
+        padding-left: 80px;
+
+        @media screen and (max-width: 1200px) {
+            padding-left: 0;
+        }
     }
 
     &__title-block {
@@ -69,6 +75,13 @@
         padding-bottom: 15px;
         padding-right: 80px;
 
+        padding-left: 20px;
+
+        @media screen and (max-width: 1200px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
         @media screen and (max-width: 1040px) {
             padding-right: 0;
         }
