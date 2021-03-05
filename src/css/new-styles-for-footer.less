@@ -1,0 +1,109 @@
+.footer {
+    @media screen and (max-width: 960px) {
+        position: relative;
+    }
+    &__col--contacts {
+        padding-top: 10px;
+
+        @media screen and (max-width: 670px) {
+            padding-bottom: 20px;
+            padding-top: 0;
+        }
+    }
+    &__contacts {
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 1px;
+
+        @media screen and (max-width: 670px) {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        p {
+            padding-bottom: 13px;
+
+            @media screen and (max-width: 670px) {
+                padding-bottom: 0;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    &__col-copyright {
+        text-align: center;
+        padding-top: 37px;
+
+        @media screen and (max-width: 670px) {
+            padding-top: 20px;
+        }
+    }
+    &__col--social {
+        @media screen and (max-width: 960px) {
+            padding-top: 25px;
+        }
+        @media screen and (max-width: 960px) {
+            padding-top: 15px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-top: 0;
+        }
+    }
+
+    &__btns-block {
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+    }
+    &__btn {
+        @media screen and (max-width: 670px) {
+            padding-top: 7px;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.social-links {
+    &__item {
+        background: #999999;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+
+        &:hover {
+            background: #F7931D;
+        }
+    }
+    &__svg {
+        path {
+            fill: #ffffff;
+        }
+
+    }
+}
+
+.social-links__item--fb {
+    align-content: flex-end;
+    align-items: flex-end;    
+}
+.social-links .social-links__svg--fb {
+    width: 18px;
+    height: 33px;
+    margin-bottom: -1px;
+}
+.social-links .social-links__svg--in {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 1px;
+}
+.social-links .social-links__svg--youtube {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 1px;
+}
