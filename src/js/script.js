@@ -329,22 +329,24 @@ $(document).ready(function () {
         }
     }
 
-    /*Полифилы для ie*/
-    if (!Element.prototype.matches) {
-        Element.prototype.matches = Element.prototype.msMatchesSelector ||
-            Element.prototype.webkitMatchesSelector;
-    }
-    if (!Element.prototype.closest) {
-        Element.prototype.closest = function (s) {
-            var el = this;
+    // Выбор языка
+    var choiseLangBtn = document.querySelector('#language-btn');
+    if (choiseLangBtn) {
+        choiseLangBtn.addEventListener('click', openChoiseLang);
 
-            do {
-                if (el.matches(s)) return el;
-                el = el.parentElement || el.parentNode;
-            } while (el !== null && el.nodeType === 1);
-            return null;
-        };
-    }
+        function openChoiseLang(event) {
+            this.classList.toggle('language__lang--active');
+            this.parentNode.querySelector('.language__choise-block').classList.toggle('language__choise-block--active');
+        }
+
+        document.addEventListener('click', closeChoiseLang);
+        function closeChoiseLang(event) {
+            if (!(event.target.closest('.language'))) {
+                choiseLangBtn.classList.remove('language__lang--active');
+                choiseLangBtn.parentNode.querySelector('.language__choise-block').classList.remove('language__choise-block--active');
+            }
+        }
+    }    
 
 })
 
@@ -460,3 +462,19 @@ $(document).ready(function () {
 
 })
 
+/*Полифилы для ie*/
+if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+        Element.prototype.webkitMatchesSelector;
+}
+if (!Element.prototype.closest) {
+    Element.prototype.closest = function (s) {
+        var el = this;
+
+        do {
+            if (el.matches(s)) return el;
+            el = el.parentElement || el.parentNode;
+        } while (el !== null && el.nodeType === 1);
+        return null;
+    };
+}

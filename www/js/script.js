@@ -349,25 +349,26 @@ $(document).ready(function () {
       event.preventDefault();
       cookies.classList.remove('cookies--open');
     }
-  }
-  /*Полифилы для ie*/
+  } // Выбор языка
 
 
-  if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-  }
+  var choiseLangBtn = document.querySelector('#language-btn');
 
-  if (!Element.prototype.closest) {
-    Element.prototype.closest = function (s) {
-      var el = this;
-
-      do {
-        if (el.matches(s)) return el;
-        el = el.parentElement || el.parentNode;
-      } while (el !== null && el.nodeType === 1);
-
-      return null;
+  if (choiseLangBtn) {
+    var openChoiseLang = function openChoiseLang(event) {
+      this.classList.toggle('language__lang--active');
+      this.parentNode.querySelector('.language__choise-block').classList.toggle('language__choise-block--active');
     };
+
+    var closeChoiseLang = function closeChoiseLang(event) {
+      if (!event.target.closest('.language')) {
+        choiseLangBtn.classList.remove('language__lang--active');
+        choiseLangBtn.parentNode.querySelector('.language__choise-block').classList.remove('language__choise-block--active');
+      }
+    };
+
+    choiseLangBtn.addEventListener('click', openChoiseLang);
+    document.addEventListener('click', closeChoiseLang);
   }
 });
 $(document).ready(function () {
@@ -501,3 +502,21 @@ $(document).ready(function () {
     }
   }
 });
+/*Полифилы для ie*/
+
+if (!Element.prototype.matches) {
+  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
+
+if (!Element.prototype.closest) {
+  Element.prototype.closest = function (s) {
+    var el = this;
+
+    do {
+      if (el.matches(s)) return el;
+      el = el.parentElement || el.parentNode;
+    } while (el !== null && el.nodeType === 1);
+
+    return null;
+  };
+}

@@ -1,0 +1,142 @@
+.language {
+    position: relative;
+    background: #333333;
+    height: 100%;
+
+    @media screen and (max-width: 1240px) { position: relative; }
+    @media screen and (max-width: 1200px) { 
+        background: transparent;
+        position: relative;
+        padding-top: 10px;
+    }  /*lg*/
+    @media screen and (max-width: 1040px) { position: relative;}  /*inner - 980px + 30px*2 */
+    @media screen and (max-width: 960px) { position: relative;}  /*md*/
+    @media screen and (max-width: 670px) { position: relative; font-size: 18px; }  /*sm*/
+
+    &__lang {
+        font-size     : 18px;
+        font-weight   : 900;
+        color         : #ffffff;
+        position      : relative;
+        cursor        : pointer;
+
+        width: 112px;
+        height: 100%;
+        display        : flex;
+        align-items    : center;
+        align-content  : center;
+        justify-content: center;
+
+        @media screen and (max-width: 1240px) {
+            width: 80px;
+        }
+        @media screen and (max-width: 1200px) {
+            padding: 12px 20px 12px 29px;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #F2994A;        
+            width: 100%;    
+            justify-content: flex-start;
+        }
+
+        &--active {
+            color: #F2994A;
+        }        
+    }
+    &__lang-current {
+        position: relative;
+
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        &:after {
+            content        : '';
+            display        : block;
+            width          : 10px;
+            height         : 6px;
+            position       : absolute;
+            
+            bottom         : -10px;
+            left: 0; right: 0;
+            margin: auto;
+            margin         : auto;
+            background     : url(../images/icons/caret_down.svg) no-repeat center;
+            background-size: contain;
+
+            @media screen and (max-width: 1200px) {
+                background-image: url(../images/icons/caret_down-mob.svg);
+                width: 11px;
+                bottom: 0;
+                top: 0;
+                left: auto;
+                transition: all 0.5s;
+            }
+        }
+    }
+    &__choise-block {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #333333;        
+        z-index: 10;
+        padding-bottom: 10px;
+
+        &--active {
+            display: block;
+        }
+
+        @media screen and (max-width: 1200px) {
+            position: relative;
+            left: auto;
+            background: transparent;
+            padding-bottom: 0;
+        }
+    }
+    &__choise-item {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 900;
+        color: #ffffff;
+        transition: all 0.5s;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: 1200px) {
+            color: #333333;
+            justify-content: flex-start;
+            padding-left: 45px;
+            font-weight: 400;
+        }        
+
+        &--active {
+            color: #F7931D;
+
+            @media screen and (max-width: 1200px) {
+                color: #F7931D;
+            }
+        }
+
+        @media screen and (min-width: 961px) {
+            &:hover {
+                background-color: #F7931D;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.language__lang--active .language__lang-current:after {
+    background-image     : url(../images/icons/caret_down-2.svg);
+
+    @media screen and (max-width: 1200px) {
+        background-image: url(../images/icons/caret_down-mob.svg);
+        transform: rotate(-180deg);
+    }
+}
