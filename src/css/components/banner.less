@@ -15,10 +15,14 @@
 
     &__container {
         padding        : 20px 0;
-        min-height     : 389px;
+        min-height: 473px;
         display        : flex;
         flex-direction : column;
         justify-content: center;
+
+        &--small {
+            min-height: 384px;
+        }
 
         @media screen and (max-width: 960px) {
             min-height: 300px;
@@ -32,6 +36,7 @@
 
     &__title {
         text-align: center;
+        font-weight: 400;
 
         @media screen and (max-width: 960px) {
             font-size: 34px;
@@ -125,4 +130,16 @@
             text-align: left;
         }
     }
+}
+
+.banner .btn:not(.banner__btn--transparent) {
+    background: #F7931D;
+    color: #ffffff;
+}
+.banner .btn:not(.banner__btn--transparent):hover {
+    background: transparent;
+    color: #F7931D;
+}
+.banner .btn:not(.banner__btn--transparent):before {
+    display: none;
 }
