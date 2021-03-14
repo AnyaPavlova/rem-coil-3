@@ -1,0 +1,68 @@
+.reviews-new {
+    padding: 80px 0 100px;
+
+    @media screen and (max-width: 960px) {
+        padding: 40px 0 70px;
+    }
+    @media screen and (max-width: 670px) {
+        padding: 30px 0 70px;
+    }
+    
+    &__item {
+        background: #F4F4F4;
+        margin-bottom: 20px;
+        padding: 40px;
+    }
+
+    &__item-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    &__item-photo-block {
+        width: 91px;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 34px;
+            height: 27px;
+            display: block;
+            background: url(../images/icons/bq-icon.svg) no-repeat center;
+            background-size: contain;
+            position: absolute;
+            right: -7px;
+            top: -6px;
+        }
+    }
+    &__item-photo {
+        border-radius: 50%;
+    }
+    &__item-contact-block {
+        width: calc( 100% - 91px );
+        padding-left: 23px;
+    }
+    &__item-name {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__item-position {
+        font-size: 13px;
+        
+        @media screen and (max-width: 960px) {
+            font-size: 14px;
+        }
+    }
+    &__text-block {
+        font-size: 20px;
+
+        @media screen and (max-width: 960px) {
+            font-size: 19px;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 20px;
+        }
+    }
+}
