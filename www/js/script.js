@@ -240,6 +240,8 @@ $(document).ready(function () {
     variableWidth: true,
     prevArrow: '<button class="history-slider__arrow history-slider__arrow--left" type="button"></button>',
     nextArrow: '<button class="history-slider__arrow history-slider__arrow--right" type="button"></button>',
+    dots: true,
+    appendDots: $('#history-slider-nav'),
     speed: 1000,
     autoplay: true,
     pauseOnHover: false,
