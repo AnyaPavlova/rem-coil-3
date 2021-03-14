@@ -371,7 +371,28 @@ $(document).ready(function () {
 
     choiseLangBtn.addEventListener('click', openChoiseLang);
     document.addEventListener('click', closeChoiseLang);
-  }
+  } // Слайдер клиентов
+
+
+  $('#our-clients-slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<button class="our-clients__arrow our-clients__arrow--left" type="button"></button>',
+    nextArrow: '<button class="our-clients__arrow our-clients__arrow--right" type="button"></button>',
+    rows: 0,
+    responsive: [{
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 670,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
 });
 $(document).ready(function () {
   //Form
