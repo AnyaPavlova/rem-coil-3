@@ -392,6 +392,19 @@ $(document).ready(function () {
         slidesToShow: 1
       }
     }]
+  }); // Слайдер на главной
+
+  $('#top-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    rows: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    fade: true,
+    speed: 700,
+    cssEase: 'linear'
   });
 });
 $(document).ready(function () {
