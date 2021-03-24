@@ -1,11 +1,9 @@
 .history-slider__dots {
     position: absolute;
-    bottom  : 18px;
+    top: 0;
     left    : 0;
     right   : 0;
     z-index : 700;
-
-    max-width: 1040px; //980px + 30*2px
     margin   : 0 auto;
 
     @media screen and (max-width: 1040px) {
@@ -28,8 +26,8 @@
             content      : '';
             display      : block;
             width        : 100%;
-            height       : 4px;
-            background   : #D7D7D7;
+            height       : 8px;
+            background   : #9F9F9F;
             border-radius: 15px;
             position     : absolute;
             left         : 0;
@@ -51,7 +49,7 @@
         button {
             font-size          : 0;
             height             : 8px;
-            // background   : #D7D7D7;
+            // background   : #9F9F9F;
             position           : relative;
             opacity            : 1;
             // transition      : all 0.5s;
@@ -61,8 +59,8 @@
                 content      : '';
                 display      : block;
                 width        : 100%;
-                height       : 4px;
-                background   : #D7D7D7;
+                height       : 8px;
+                background   : #9F9F9F;
                 border-radius: 15px;
                 position     : absolute;
                 left         : 0;
@@ -71,6 +69,14 @@
                 bottom       : 0;
                 margin       : auto;
                 // transition: all 0.5s;
+            }
+
+            &:hover {
+                &:before {
+                    height: 14px;
+                    top: -3px;
+                    background   : #F7931D;
+                }
             }
 
         }
@@ -86,4 +92,17 @@
             }
         }
     }
+}
+.history-slider__arrow {
+    background: transparent;
+    width: 50%;
+    height: 100%;
+
+    &--left {
+        left: 0;
+    }
+    &--right {
+        right: 0;
+    }
+
 }
