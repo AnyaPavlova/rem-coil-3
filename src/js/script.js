@@ -409,12 +409,27 @@ $(document).ready(function () {
             event.preventDefault();
 
             if (!(form.querySelector('.form__message'))) {
-                form.insertAdjacentHTML('beforeend', '<div class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и отправьте снова.</div>');
+                var textError = form.dataset.messangeError;
+                if(textError) {
+                  textError = '<div class="form__message form__message--error">' + textError + '</div>';
+                } else {
+                  textError = '<div class="form__message form__message--error">error!</div>';
+                }
+                
+                form.insertAdjacentHTML('beforeend', textError);
             }
         }
         else { /*если нет ошибки - отправляем форму*/
             event.preventDefault();
-            form.insertAdjacentHTML('beforeend', '<div class="form__message form__message--ok">Ваша заявка принята. Мы свяжемся с вами в ближайшее время</div>');
+
+            var textOk = form.dataset.messangeOk;
+            if(textOk) {
+              textOk = '<div class="form__message form__message--ok">' + textOk + '</div>';
+            } else {
+              textOk = '<div class="form__message form__message--ok">success!</div>';
+            }
+
+            form.insertAdjacentHTML('beforeend', textOk);
 
             sendAjaxForm(form); //отправка формы
             resetForm(form); //очищаем форму
